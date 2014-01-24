@@ -5,16 +5,22 @@ class HashSort
   end
 
   def sort
-    group_by_times.map do |array_hash|
-      array_hash.map do |k,v|
-	array_hash[1].each_with_object({}) do |value_hash, hash|
-	  hash.merge!(value_hash)
-	end
-      end.uniq
+    group_by(:time).map do |array_hash|
+      combine_hashes(array_hash)
     end.flatten
   end
 
-  def group_by_times
-    input_data.group_by { |data| data[:time] }
+  def group_by(key)
+    input_data.group_by { |data| data[key] }
+  end
+
+  def combine_hash(input_hash)
+    input_hash[1].each_with_object({}) do |value_hash, hash|
+      hash.merge!(value_hash)
+    end
+  end
+
+  def combine_hashes(hashes)
+      hashes.map { |k,v| combine_hash(hashes) }.uniq
   end
 end
