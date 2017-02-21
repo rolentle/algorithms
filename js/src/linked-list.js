@@ -4,13 +4,12 @@ class LinkedList {
   count() {
     if (this.head) {
       return this.head.count();
-    } else {
-      return 0;
     }
+    return 0;
   }
 
   push(data) {
-    add(data);
+    this.add(data);
   }
 
   add(data) {
@@ -20,6 +19,6 @@ class LinkedList {
       this.head = new DataNode(data);
     }
   }
-};
+}
 
 export default LinkedList;

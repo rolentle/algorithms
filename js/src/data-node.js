@@ -6,17 +6,14 @@ class DataNode {
   count() {
     if (this.child) {
       return this.child.count() + 1;
-    } else {
-      return 1;
     }
+    return 1;
   }
 
   push(data) {
-    add(data);
+    this.add(data);
   }
 
-  pop(data) {
-  }
 
   add(data) {
     if (this.child) {
