@@ -9,6 +9,10 @@ class LinkedList {
     }
   }
 
+  push(data) {
+    add(data);
+  }
+
   add(data) {
     if (this.head) {
       this.head.add(data);

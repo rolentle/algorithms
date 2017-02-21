@@ -13,7 +13,13 @@ test('Linked List count returns 1 when adding 1 datum', () => {
 
 test('Linked List count returns 2 when adding 2 data', () => {
   let linkedList = new LinkedList();
-  linkedList.add('foo');
-  linkedList.add('bar');
+  ['foo', 'bar'].forEach((datum) => linkedList.add(datum));
   expect(linkedList.count()).toBe(2);
 });
+
+test('Linked List count returns 3 when adding 3 data', () => {
+  let linkedList = new LinkedList();
+  ['foo', 'bar', 'baz'].forEach((datum) => linkedList.add(datum));
+  expect(linkedList.count()).toBe(3);
+});
+
