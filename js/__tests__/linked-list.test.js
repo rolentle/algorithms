@@ -1,7 +1,6 @@
-import Node from '../src/linked-list';
+import LinkedList from '../src/linked-list';
 
-test('Node has value', () => {
-  let value = 'foo';
-  let node =  new Node(value);
-  expect(node.value).toBe(value);
+test('Linked List count returns 0 with no data', () => {
+  let linkedList = new LinkedList();
+  expect(linkedList.count()).toBe(0);
 });

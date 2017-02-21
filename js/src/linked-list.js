@@ -1,7 +1,7 @@
-class Node {
-  constructor(value) {
-    this.value = value;
+class LinkedList {
+  count() {
+    return 0;
   }
 };
 
-export default Node;
+export default LinkedList;
