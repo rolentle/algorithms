@@ -1,6 +1,20 @@
+import DataNode from './data-node';
+
 class LinkedList {
   count() {
-    return 0;
+    if (this.head) {
+      return this.head.count();
+    } else {
+      return 0;
+    }
+  }
+
+  add(data) {
+    if (this.head) {
+      this.head.add(data);
+    } else {
+      this.head = new DataNode(data);
+    }
   }
 };
 
