@@ -1,0 +1,32 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "algorithms in es6",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-jest": "^18.0.0",
+    "jest": "^18.1.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
+}
